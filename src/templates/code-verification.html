@@ -1,0 +1,249 @@
+<!--
+    Nota: muchos clientes de correo ignoran <style>, pero incluimos reglas básicas.
+    Mantén también estilos inline en elementos importantes.
+  -->
+<style>
+  /* Mobile tweaks */
+  @media only screen and (max-width: 480px) {
+    .container {
+      width: 100% !important;
+      padding: 20px !important;
+    }
+    .hero {
+      padding: 24px !important;
+    }
+    .code-box {
+      font-size: 32px !important;
+      letter-spacing: 6px !important;
+    }
+    .btn {
+      width: 100% !important;
+      display: block !important;
+    }
+  }
+</style>
+
+<body
+  style="
+    margin: 0;
+    padding: 0;
+    background: #f4f6f8;
+    font-family:
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+      Arial;
+    color: #333333;
+  "
+>
+  <!-- Wrapper table for email clients -->
+  <table
+    width="100%"
+    cellpadding="0"
+    cellspacing="0"
+    role="presentation"
+    style="background: #f4f6f8; width: 100%; min-height: 100vh"
+  >
+    <tr>
+      <td align="center" style="padding: 32px 16px">
+        <!-- Card -->
+        <table
+          class="container"
+          width="600"
+          cellpadding="0"
+          cellspacing="0"
+          role="presentation"
+          style="
+            width: 600px;
+            max-width: 600px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(20, 20, 50, 0.08);
+            overflow: hidden;
+          "
+        >
+          <!-- Header (logo) -->
+          <tr>
+            <td
+              style="
+                padding: 22px 28px;
+                background: linear-gradient(90deg, #01448e, #01448e);
+              "
+            >
+              <table
+                width="100%"
+                cellpadding="0"
+                cellspacing="0"
+                role="presentation"
+              >
+                <tr>
+                  <td style="vertical-align: middle">
+                    <!-- Logo / Brand -->
+                    <img
+                      alt="Logo"
+                      src="https://unimayor.edu.co/web/images/imagenes/escudo.jpg"
+                      width="62"
+                      height="42"
+                      style="
+                        object-fit: contain;
+                        display: block;
+                        border: 0;
+                        outline: none;
+                        text-decoration: none;
+                      "
+                    />
+                  </td>
+                  <td
+                    align="right"
+                    style="
+                      color: #ffffff;
+                      font-size: 13px;
+                      vertical-align: middle;
+                    "
+                  >
+                    <strong style="font-weight: 600"
+                      >Código de verificación</strong
+                    >
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Hero content -->
+          <tr>
+            <td class="hero" style="padding: 32px 28px; text-align: left">
+              <h1
+                style="
+                  margin: 0 0 10px 0;
+                  font-size: 22px;
+                  line-height: 1.2;
+                  color: #0f172a;
+                "
+              >
+                Verifica tu identidad
+              </h1>
+              <p
+                style="
+                  margin: 0 0 18px 0;
+                  color: #475569;
+                  font-size: 15px;
+                  line-height: 1.5;
+                "
+              >
+                Estimado(a) <strong style="color: #0f172a">{{NAME}}</strong>,
+                para continuar con el proceso de ingreso a la
+                <strong>bolsa de empleo unimayor</strong>, hemos generado el
+                siguiente codigo de verificación. Recuerda que este código solo
+                es válido <strong>10 minutos</strong>.
+              </p>
+
+              <!-- Code box -->
+              <div style="margin: 18px 0 20px 0; text-align: center">
+                <div
+                  class="code-box"
+                  style="
+                    display: inline-block;
+                    padding: 9px 14px;
+                    border-radius: 10px;
+                    background: linear-gradient(180deg, #f8fafc, #ffffff);
+                    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+                    font-weight: 700;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 28px;
+                    letter-spacing: 8px;
+                    color: #0b1220;
+                  "
+                >
+                  <!-- Render individual digits spaced out or the whole code -->
+                  {{CODE}}
+                </div>
+              </div>
+
+              <!-- Helper text -->
+              <p
+                style="
+                  margin: 0;
+                  color: #64748b;
+                  font-size: 13px;
+                  text-align: center;
+                "
+              >
+                Si tu código ya expiró, puedes solicitar uno nuevo iniciando
+                sesión nuevamente.
+                <br />
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer info: fallback code & security -->
+          <tr>
+            <td
+              style="
+                padding: 22px 28px 28px 28px;
+                background: #fbfdff;
+                border-top: 1px solid #eef2ff;
+              "
+            >
+              <table
+                width="100%"
+                cellpadding="0"
+                cellspacing="0"
+                role="presentation"
+              >
+                <tr>
+                  <td style="font-size: 13px; color: #6b7280">
+                    <strong>¿No solicitaste este código?</strong><br />
+                    Si no iniciaste sesión o no reconoces esta actividad,
+                    protege tu cuenta cambiando tu contraseña o contactando
+                    soporte.
+                  </td>
+                  <td
+                    align="right"
+                    style="
+                      font-size: 13px;
+                      color: #94a3b8;
+                      vertical-align: middle;
+                    "
+                  >
+                    Código válido por 10 minutos
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Small footer -->
+          <tr>
+            <td
+              style="
+                padding: 18px 20px;
+                text-align: center;
+                font-size: 12px;
+                color: #9ca3af;
+              "
+            >
+              <div>
+                <span style="display: block; margin-bottom: 6px">
+                  BOLSA DE EMPLEADO UNIMAYOR • Katerine Idrobo
+                </span>
+                <span>
+                  Si tiene problemas, responda este correo o comuníquese con la
+                  oficina de sistemas de información.
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <!-- /Card -->
+      </td>
+    </tr>
+  </table>
+
+  <!-- Plain-text fallback (para clientes que renderizan texto o cuando envíes también la versión text) -->
+  <!--
+  Texto alternativo:
+  Hola {{NAME}},
+  Tu código de verificación es: {{CODE}}
+  Este código expira en 10 minutos.
+  Si no eres tú, ignora este correo.
+  -->
+</body>

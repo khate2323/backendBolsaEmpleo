@@ -1,0 +1,11 @@
+{
+    "status": true,
+    "message": "success",
+    "results":[]//aqui los datos    
+}
+{
+    "status": false,
+    "message": "error",
+    "description": "error por este o este motivo",
+    "results":[]    
+}

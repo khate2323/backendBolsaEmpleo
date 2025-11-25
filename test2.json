@@ -1,0 +1,17 @@
+{
+    "status": true,
+    "statusCode": 201,
+    "message": "success",
+    "results": {
+        "id": 2,
+        "name": "Diana Katerine Idrobo",
+        "email": "diana.idrobo@unimayor.edu.co",
+        "role": {
+            "id": 2,
+            "nombre": "egresado"
+        },
+        "isActive": true,
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpYW5hLmlkcm9ibzlAdW5pbWF5b3IuZWR1LmNvIiwic3ViIjoyLCJpYXQiOjE3NjM0Mzg4MDksImV4cCI6MTc2MzUyNTIwOX0.ircZvEZLUCi-8Qnk0MhaQSfoLio_JGFNJjqR0y5z93I",
+        "otpExpiresAt": "2025-11-18T04:16:47.555Z"
+    }
+}
