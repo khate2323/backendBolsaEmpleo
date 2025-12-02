@@ -18,4 +18,14 @@ export class ValidateFields {
         if (!isEmail(email)) { throw new BadRequestException('El email no es valido') }
         return true;
     }
+    isEmailUnimayor(email: string): boolean {
+        const domain = '@unimayor.edu.co';
+        if (!email.toLowerCase().endsWith(domain)) {
+            throw new BadRequestException(`El correo debe pertenecer al dominio ${domain}`);
+        }
+
+        return true;
+    }
+
 }
+
