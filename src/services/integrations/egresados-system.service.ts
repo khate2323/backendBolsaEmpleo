@@ -8,12 +8,12 @@ import { log } from 'node:console';
 export class EgresadosSystemService {
     constructor() { }
 
-    async getEgresadoByEmailInstitute(email: string, password: string): Promise<Egresado | null> {
+    async getEgresadoByEmailInstitute(email: string, password: string): Promise<any | null> {
         try {
             const { data, error } = await supabase
-                .from('tbl_system_egresados')
+                .from('tbl_egresado')
                 .select('*')
-                .eq('emailinstitute', email)
+                .eq('email_institucional', email)
                 .maybeSingle();
 
 

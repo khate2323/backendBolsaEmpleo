@@ -30,43 +30,43 @@ export class Egresado {
     @Column({ nullable: true })
     avatar: string;
 
-    @Column()
+    @Column({ nullable: true })
     codigo: string;
 
-    @Column()
+    @Column({ nullable: true })
     programa: string;
 
-    @Column()
+    @Column({ nullable: true })
     modalitydegree: string;
 
-    @Column()
+    @Column({ nullable: true })
     datedegree: Date;
 
-    @Column()
+    @Column({ nullable: true })
     libro: string;
 
-    @Column()
+    @Column({ nullable: true })
     idividualacta: string;
 
-    @Column()
+    @Column({ nullable: true })
     folio: string;
 
-    @Column()
+    @Column({ nullable: true })
     actageneral: string;
 
-    @Column()
+    @Column({ nullable: true })
     gender: string;
 
-    @Column()
+    @Column({ nullable: true })
     departament: string;
 
-    @Column()
+    @Column({ nullable: true })
     municipality: string;
 
-    @Column()
+    @Column({ nullable: true })
     direction: string;
 
-    @Column()
+    @Column({ nullable: true })
     phone: string;
 
     @Column({ nullable: false, unique: true })
@@ -75,19 +75,19 @@ export class Egresado {
     @Column({ nullable: false, unique: true })
     emailpersonal: string;
 
-    @Column()
+    @Column({ nullable: true })
     disability: string;
 
-    @Column()
+    @Column({ nullable: true })
     typedisability: string;
 
-    @Column()
+    @Column({ nullable: true })
     faculty: string;
 
-    @Column()
+    @Column({ nullable: true })
     program: string;
 
-    @Column()
+    @Column({ nullable: true })
     password: string;
 
     @Column({ nullable: true, type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })

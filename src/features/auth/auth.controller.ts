@@ -122,13 +122,12 @@ export class AuthController {
                 email,
                 password,
               );
-            console.log(response, 'response');
 
             if (response) {
               return await this.dataSource.transaction(async (manager) => {
                 const body = {
                   name: response.name,
-                  email: response.emailinstitute,
+                  email: response.email_institucional,
                   password: password,
                   isActive: true,
                   role: roleFound,
@@ -136,7 +135,17 @@ export class AuthController {
 
                 const newUser = await this.authService.register(body, manager);
                 const newEgresado = await this.egresadosService.create(
-                  { ...response, id_egresado: response.id },
+                  {
+                    ...response,
+                    typeidentification: response.tipo_documento,
+                    identification: response.identification,
+                    dateexpidentification: response.fecha_exp,
+                    modalitydegree: response.id_modalidad_grado,
+                    datedegree: response.fecha_grado,
+                    actageneral: response.acta_graduado,
+                    emailinstitute: response.email_institucional,
+                    emailpersonal: response.email_personal,
+                  },
                   manager,
                 );
                 await this.usersService.update(
