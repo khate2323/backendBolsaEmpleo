@@ -6,18 +6,23 @@ import { ValidateFields } from 'src/common/validators/validateFields.validator';
 import { EmailService } from 'src/services/emails.service';
 import { RandomUtil } from 'src/common/utils/random.util';
 import { EmailController } from 'src/controllers/email/email.controller';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({
+          isGlobal: true,
+          envFilePath: '.env'
+        }),
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.gmail.com',
+        host: process.env.HOST_EMAIL,
         port: 587,
         secure: false, // true para 465
         pool: true,
         auth: {
-          user: 'dkaterine2601@gmail.com',
-          pass: 'dyju zarj kzlb bfup',
+          user: process.env.EMAIL,
+          pass: process.env.PWD_EMAIL,
         },
       },
       defaults: {

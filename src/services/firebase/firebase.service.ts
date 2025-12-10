@@ -1,9 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
 import * as admin from 'firebase-admin';
-import { ServiceAccount } from 'firebase-admin';
 import { v4 as uuidv4 } from 'uuid';
 import sharp from 'sharp';
-import * as serviceAccount from '../../config/firebase-service.json';
+import * as serviceAccount from '../../config/firebase-config.json';
 
 @Injectable()
 export class FirebaseService {
